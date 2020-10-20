@@ -39,7 +39,14 @@ if __name__ == '__main__':
 	print('hello')
 
 	path = '/Users/pascal/动画游戏科技-2020/10月-科技-机器视觉-ICP/Blender/'
-	fileName = 'Transformation_AllFrames.txt'
+
+	timeInterval = []
+	timeInterval.append(2)
+	timeInterval.append(3)
+	timeInterval.append(10)
+	timeInterval.append(30)
+	timeInterval.append(100)
+	fileName = 'Transformation_AllFrames_LC_'+str(timeInterval[4])+'.txt'
 	angles, axs, ays, azs, xs, ys, zs = ReadFile(path, fileName)
 
 
@@ -75,3 +82,4 @@ if __name__ == '__main__':
 		bpy.ops.anim.keyframe_insert_menu(type='BUILTIN_KSI_LocRot')
 
 	
+
